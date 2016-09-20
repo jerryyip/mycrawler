@@ -9,6 +9,7 @@ try:
         story.write(str(bsobj))
         nameList = bsobj.findAll("span", {"class":"green"})
         for name in nameList:
+            print(name.get_text())
             story.write(str(name.get_text()))
 except Exception as e:
     print (e)
